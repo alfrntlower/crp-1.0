@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Price</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <p><a href="index.html">Go back</a></p>
+
+<label>
+    Rate
+    <input type="rate" name="rate" />
+</label>
+
+<br>
+<br>
+
+<label>
+    Amount
+    <input type="amount" name="amount" />
+</label>
+
+<br>
+
+<p>USDT :<span class="usdt">-</span></p>
+
+<label>
+    New Rate
+    <input type="new-rate" name="new-rate" />
+</label>
+
+<br>
+<br>
+
+<label>
+    New Amount
+    <input type="new-amount" name="new-amount" />
+</label>
+
+<p>New USDT :<span class="new-usdt">-</span></p>
+
+<button type="button" class="btn">Calculate</button>
+
+<p>Avg Rate :<span class="avg-rate">-</span></p>
+<p>Total Amount :<span class="total-amount">-</span></p>
+<p>Total USDT :<span class="total-usdt">-</span></p>
+
+
+
+    <script src="js/avg-price.js" type="module"></script>
+</body>
+</html>
