@@ -14,32 +14,52 @@ const avgRate = document.querySelector(".avg-rate");
 const totalAmount = document.querySelector(".total-amount");
 const totalUsdt = document.querySelector(".total-usdt");
 
+let rateValue = 0;
+let amountValue = 0;
+let usdtValue = 0;
+
+let newRateValue = 0;
+let newAmountValue = 0;
+let newUsdtValue = 0;
+
+rate.addEventListener("change", () => {
+
+    rateValue = Number(rate.value);
+
+    amount.addEventListener("change", () => {
+        amountValue = Number(amount.value);
+        usdtValue = rateValue * amountValue;
+        usdt.textContent = ` ${Number(usdtValue).toFixed(2)} $$$`;
+    })
+       
+})
+
+newRate.addEventListener("change", () => {
+    
+    newRateValue = Number(newRate.value);
+    newAmount.addEventListener("change", () => {
+        newAmountValue = Number(newAmount.value);
+        newUsdtValue = newRateValue * newAmountValue
+        newUsdt.textContent = ` ${Number(newUsdtValue).toFixed(2)} $$$`;
+    })
+
+})
+
 
 function onCalcBtnClick() {
 
-    const rateValue = + rate.value;
-    const amountValue = + amount.value;
-    const usdtValue = rateValue * amountValue
-    usdt.textContent = usdtValue;
+    let totalAmountValue = amountValue + newAmountValue;
+    console.log(totalAmountValue);
+    totalAmount.textContent = ` ${Number(totalAmountValue).toFixed(2)} $$$`;
 
-    const newRateValue = + newRate.value;
-    const newAmountValue = + newAmount.value;
-    const newUsdtValue = newRateValue * newAmountValue
-    newUsdt.textContent = newUsdtValue;
+    let totalUsdtValue = usdtValue + newUsdtValue;
+     console.log(totalUsdtValue);
+    totalUsdt.textContent = ` ${Number(totalUsdtValue).toFixed(2)} $$$`;
 
-    console.log(rateValue);
-
-    const totalAmountValue = amountValue + newAmountValue;
-    totalAmount.textContent = totalAmountValue;
-
-    const totalUsdtValue = usdtValue + newUsdtValue;
-    totalUsdt.textContent = totalUsdtValue;
-
-    const avgRateValue = totalUsdtValue / totalAmountValue;
-    avgRate.textContent = avgRateValue;
-
-
-    
+    let avgRateValue = totalUsdtValue / totalAmountValue;
+    console.log(avgRateValue);
+    avgRate.textContent = ` ${Number(avgRateValue).toFixed(2)} $$$`;
+   
 }
 
 calcBtn.addEventListener('click',onCalcBtnClick);
