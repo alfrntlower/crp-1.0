@@ -24,9 +24,18 @@ let newUsdtValue = 0;
 
 rate.addEventListener("change", () => {
 
+    if (rate.value.includes(",")) {
+        alert("Please use DOT instead of COMMA");
+    }
+
     rateValue = Number(rate.value);
 
     amount.addEventListener("change", () => {
+
+        if (rate.value.includes(",")) {
+        alert("Please use DOT instead of COMMA");
+        }
+
         amountValue = Number(amount.value);
         usdtValue = rateValue * amountValue;
         usdt.textContent = ` ${Number(usdtValue).toFixed(2)} $$$`;
@@ -36,8 +45,18 @@ rate.addEventListener("change", () => {
 
 newRate.addEventListener("change", () => {
     
+    if (rate.value.includes(",")) {
+        alert("Please use DOT instead of COMMA");
+    }
+
+
     newRateValue = Number(newRate.value);
     newAmount.addEventListener("change", () => {
+
+        if (rate.value.includes(",")) {
+        alert("Please use DOT instead of COMMA");
+        }
+
         newAmountValue = Number(newAmount.value);
         newUsdtValue = newRateValue * newAmountValue
         newUsdt.textContent = ` ${Number(newUsdtValue).toFixed(2)} $$$`;
