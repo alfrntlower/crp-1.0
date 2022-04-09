@@ -1,6 +1,6 @@
 
 
-const calcBtn = document.querySelector(".btn");
+const calcBtn = document.querySelector(".js-btn");
 
 const rate = document.querySelector('[name=rate]');
 const amount = document.querySelector('[name=amount]');
@@ -10,9 +10,9 @@ const newRate = document.querySelector('[name=new-rate]');
 const newAmount = document.querySelector('[name=new-amount]');
 const newUsdt = document.querySelector('.new-usdt');
 
-const avgRate = document.querySelector(".avg-rate");
-const totalAmount = document.querySelector(".total-amount");
-const totalUsdt = document.querySelector(".total-usdt");
+const avgRate = document.querySelector(".js-avg-rate");
+const totalAmount = document.querySelector(".js-total-amount");
+const totalUsdt = document.querySelector(".js-total-usdt");
 
 let rateValue = 0;
 let amountValue = 0;

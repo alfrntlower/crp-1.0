@@ -1,4 +1,4 @@
-const calcBtn = document.querySelector(".btn");
+const calcBtn = document.querySelector(".js-btn");
 
 const rate = document.querySelector('[name=rate]');
 const amount = document.querySelector('[name=amount]');
@@ -6,10 +6,10 @@ const usdt = document.querySelector('.usdt');
 
 const futureRate = document.querySelector('[name=future-rate]');
 
-const totalUsdt = document.querySelector(".total-usdt");
-const usdtProfit = document.querySelector(".usdt-profit");
-const profitX = document.querySelector(".profit-x");
-const profitPercent = document.querySelector(".profit-percent");
+const totalUsdt = document.querySelector(".js-total-usdt");
+const usdtProfit = document.querySelector(".js-usdt-profit");
+const profitX = document.querySelector(".js-profit-x");
+const profitPercent = document.querySelector(".js-profit-percent");
 
 let rateValue = 0;
 let amountValue = 0;
