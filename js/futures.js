@@ -10,6 +10,7 @@ const price = document.querySelector('[name=price]');
 const tp = document.querySelector('[name=takeprofit]');
 
 const profit = document.querySelector(".js-profit");
+const priceChange = document.querySelector(".js-price-change");
 
 let betValue = 0;
 let priceValue = 0;
@@ -68,6 +69,9 @@ function calculateLong() {
     const profitValue = ((1/priceValue-1/tpValue)*betValue)*tpValue;
     profit.textContent = ` ${Number(profitValue).toFixed(2)} $$$`;
 
+    const priceChangeValue = profitValue / betValue * 100;
+    priceChange.textContent = ` ${Number(priceChangeValue).toFixed(1)} %`;
+
 }
 
 function calculateShort() {
@@ -78,5 +82,8 @@ function calculateShort() {
 
     const profitValue = (1/priceValue-1/tpValue)*(-betValue)*tpValue;
     profit.textContent = ` ${Number(profitValue).toFixed(2)} $$$`;
+
+    const priceChangeValue = profitValue / betValue * 100;
+    priceChange.textContent = ` ${Number(priceChangeValue).toFixed(1)} %`;
 
 }
