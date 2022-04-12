@@ -14,7 +14,6 @@ body {
 input {
 	padding: 8px;
 	font: inherit;
-	width: 100px;
 }
 
 button {
@@ -56,4 +55,8 @@ button {
 	.button {
 		padding: 0.25em 0.75em;
 	}
+}
+
+.input-field {
+	width: 100px;
 }

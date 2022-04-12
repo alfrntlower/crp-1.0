@@ -17,41 +17,45 @@
     <br>
 
     <label>
-        Rate
-        <input type="rate" name="rate" class="input-field"/>
+        Bet
+        <input type="bet" name="bet" class="input-field"/>
     </label>
 
     <br>
     <br>
+
+<label>
+    <input type="checkbox" name="long" value="long" checked />
+    LONG
+</label>
+<label>
+    <input type="checkbox" name="short" value="short" />
+    SHORT
+</label>
+
+<br>
+<br>
 
     <label>
-        Amount
-        <input type="amount" name="amount" class="input-field"/>
+        Price
+        <input type="price" name="price" class="input-field"/>
     </label>
 
     <br>
-
-    <p>USDT :<span class="usdt">-</span></p>
-
+    <br>
     <label>
-        Future Rate
-        <input type="new-rate" name="future-rate" class="input-field"/>
+        TP
+        <input type="takeprofit" name="takeprofit" class="input-field"/>
     </label>
 
     <br>
     <br>
-
 
     <button type="button" class="js-btn button" role="button">Calculate</button>
 
-    <p>Total USDT :<span class="js-total-usdt">-</span></p>
-    <p>USDT Profit :<span class="js-usdt-profit">-</span></p>
-    <p>Profit X :<span class="js-profit-x">-</span></p>
-    <p>Profit % :<span class="js-profit-percent">-</span></p>
+    <p>Profit :<span class="js-profit">-</span></p>
 
-
-
-    <script src="js/potencial-profit.js" type="module"></script>
+    <script src="js/futures.js" type="module"></script>
 </body>
 
 </html>
