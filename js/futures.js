@@ -43,8 +43,15 @@ function onCalcBtnClick() {
         calculateShort();
     }
 
-    else if (long.checked || short.checked) {
-        return alert("Please select LONG or SHORT");
+    if (long.checked === true && short.checked === true) {
+        alert("Please select LONG or SHORT");
+        profit.textContent = `-`;
+        
+    }
+
+    if (long.checked === false && short.checked === false) {
+        alert("Please select LONG or SHORT");
+        profit.textContent = `-`;
         
     }
 
@@ -70,6 +77,6 @@ function calculateShort() {
     tpValue = Number(tp.value);
 
     const profitValue = (1/priceValue-1/tpValue)*(-betValue)*tpValue;
-    profit.textContent = ` ${Number(profitValue).toFixed(2)} $$$`
+    profit.textContent = ` ${Number(profitValue).toFixed(2)} $$$`;
 
 }
