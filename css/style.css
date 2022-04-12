@@ -24,8 +24,20 @@ button {
 	margin-bottom: 15px;
 }
 
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
 .main-list {
 	font-size: 20px;
+	display: block;
+	align-items: center;
+	outline: 1px solid red;
+	padding: 0;
 }
 
 .button {
@@ -59,4 +71,9 @@ button {
 
 .input-field {
 	width: 100px;
+}
+
+.link-for-pages {
+	display: flex;
+	justify-content: center;
 }
