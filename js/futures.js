@@ -87,3 +87,4 @@ function calculateShort() {
     priceChange.textContent = ` ${Number(priceChangeValue).toFixed(1)} %`;
 
 }
+
