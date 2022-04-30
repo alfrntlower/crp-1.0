@@ -42,6 +42,8 @@ function addDarkClassToHtml() {
         }
         
     } catch (err) { }
-}
+};
 
 addDarkClassToHtml();
+
+
