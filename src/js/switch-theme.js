@@ -1,5 +1,5 @@
 const switchT = document.querySelector('[name=switch]');
-let linkForPages = document.querySelectorAll(".main-list-pages__link");
+//let linkForPages = document.querySelectorAll(".main-list-pages__link");
 
 switchT.addEventListener("change", () => {
 
@@ -7,7 +7,7 @@ switchT.addEventListener("change", () => {
         console.log("Black theme");
         localStorage.setItem("theme", "dark");
 
-        console.log(linkForPages.classList);
+        //console.log(linkForPages.classList);
 
     }
     else {
@@ -20,13 +20,13 @@ switchT.addEventListener("change", () => {
     addDarkClassToHtml();
 })
 
- if (localStorage.getItem('theme') === 'dark') {     
-    //  localStorage.removeItem('theme');
+if (localStorage.getItem('theme') === 'dark') {     
+
     localStorage.setItem('theme', 'dark');
     switchT.checked = true;        
         }
 else {
-    //  localStorage.setItem('theme', 'dark');
+
     localStorage.removeItem('theme');    
         }
 
